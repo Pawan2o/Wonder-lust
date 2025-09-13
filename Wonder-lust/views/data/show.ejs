@@ -1,0 +1,47 @@
+<% layout("/layouts/boilerplate") -%>
+
+<!-- Main container row with a top margin -->
+<div class="row mt-3">
+
+ 
+
+    <!-- Card to display the image and description -->
+    <div class="card col-8 offset-2">
+        <!-- Listing Image -->
+        <img src="<%= listing.image.url %>" class="card-img-top show-image" alt="<%= listing.title %>">
+     </div>
+<div class="row mt-3 col-8 offset-2">
+      <!-- Section for the Listing Title -->
+     <div class="col-8 offset-2">
+        <h3><%= listing.title %></h3>
+     </div>
+        
+        <!-- Card body for the description -->
+        <div class="card-body col-8 offset-2">
+            <p class="card-text">
+                <%= listing.description %>
+            </p>
+        </div>
+     <!-- Section for listing details (price, location) and action buttons -->
+     <div class="col-7 offset-2 mb-3">
+        <!-- Unordered list for details -->
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><%= listing.location %>, <%= listing.country %></li>
+
+            <!-- Safely display the price, showing "N/A" if it's missing -->
+            <li class="list-group-item">&#8377; <%= (listing.price != null) ? listing.price.toLocaleString("en-IN") : "N/A" %></li>
+        </ul>
+
+        <!-- Container for Edit and Delete buttons, displayed side-by-side -->
+        <div class="d-flex mt-3">
+            <!-- Edit Button -->
+            <a href="/data/<%= listing._id %>/edit" class="btn btn-dark me-3 edit-btn">Edit Your Listing</a>
+            
+            <!-- Delete Button (inside a form to send a DELETE request) -->
+            <form method="POST" action="/data/<%= listing._id %>?_method=DELETE">
+                <button class="btn btn-dark delete-btn" type="submit">Delete Your Listing</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

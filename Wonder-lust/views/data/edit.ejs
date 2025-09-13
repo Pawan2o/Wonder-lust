@@ -1,0 +1,52 @@
+<% layout("/layouts/boilerplate") -%>
+
+    <div class="row mb-3">
+        <div class="col-8 offset-2">
+            <br>
+            <h3>Edit Listing</h3>
+            <hr />
+            <br />
+            <form method="post" action="/data/<%= listing._id %>?_method=PUT">
+                <div class="mb-3">
+                    <label for="title">Title:</label>
+                    <input id="title" name="data[title]" value="<%= listing.title %>" type="text"
+                        class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="data[description]" type="text"
+                        class="form-control"><%= listing.description %></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="image">Image URL:</label>
+                    <input id="image" name="data[image]" type="text" class="form-control"
+                        value="<%= typeof listing.image === 'object' ? listing.image.url : listing.image %>" />
+                </div>
+
+                <div class="row ">
+                    <div class="mb-3 col-4">
+                        <label for="price">Price:</label>
+                        <input id="price" name="data[price]" type="number" value="<%= listing.price %>"
+                            class="form-control" />
+                    </div>
+
+                    <div class=" mb-3 col-8">
+                        <label for="country">Country:</label>
+                        <input id="country" name="data[country]" type="text" value="<%= listing.country %>"
+                            class="form-control" />
+                    </div>
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="location">Location:</label>
+                    <input id="location" name="data[location]" type="text" value="<%= listing.location %>"
+                        class="form-control" />
+                </div>
+
+                <button class="btn btn-dark edit-btn" type="submit">Edit</button>
+            </form>
+        </div>
+    </div>

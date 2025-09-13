@@ -1,0 +1,8 @@
+# Dependencies - these are installed by running 'npm install'
+/node_modules
+
+# Miscellaneous
+.DS_Store
+*.log
+
+/notepad.text

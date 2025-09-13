@@ -1,0 +1,20 @@
+Step ! 
+npm init - y 
+npm i express
+npm i ejs
+npm i mongoose
+now we create app.js file using commond New-Item app.js
+Step 2 
+// basic strucher 
+const express = require('express');
+const app = express();
+const mongoose = require('mongoose');
+
+
+app.get('/',(req, res) => {
+    res.send ("Hi i am root");
+});
+
+app.listen(3000, () => { // server setup "() =>"" called function 
+    console.log('Server is running on port 3000');
+}); //  to start the server nodemon app.js

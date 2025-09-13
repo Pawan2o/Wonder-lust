@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="Left">Pawan Portfolio</div>
+            <div class="Right">
+                <ul>
+                    <li> <a href="/"> Home </a> </li>
+                    <li> <a href="/"> About </a> </li>
+                    <li> <a href="/"> Services </a> </li>
+                    <li> <a href="/"> Project </a> </li>
+                    <li> <a href="/"> Contact Me </a> </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="Firstsection">
+            <div class="Leftsection">Hi my name is <samp class="Pawan">Pawan Pareek</samp>,
+                <div>I am a Compiter Engineer and </div>
+                <span id="element"></span>
+            </div>
+            <div class="Rightsection"><img src="developer_male.png" alt=""></div>
+        </section>
+        <hr class="hr1">
+        <section class="Secondsection">
+            <span class="About-me">About Me</span>
+            <h2>Work Experince</h2>
+            <hr class="hr2">
+            <div class="split-container">
+                <div class="vertical-line"></div>
+                <div class="Work">
+                    <h3>Web Developer</h3>
+                    <h4>Zonedout</h4>
+                    <h5>11th July to 11th December 2024</h5>
+                    <p>Front-End Developer — Zonedout Marketing and Media
+                        June 2024 – December 2024
+
+                        During my time at Zonedout Marketing and Media, I worked closely with clients to bring their
+                        digital ideas to life. I focused on building responsive, user-friendly websites that not only
+                        looked good but also performed efficiently across devices.
+
+                        Some highlights of my work include:
+
+                        Turning UI/UX designs into reality by developing functional and visually appealing web
+                        interfaces.
+
+                        Customizing WordPress themes and plugins to meet unique client needs.
+
+                        Boosting website performance by optimizing code and reducing page load times by up to 40%.
+
+                        Managing and maintaining 15+ client websites, ensuring they stayed secure, updated, and smooth
+                        for users.
+
+                        This role helped me strengthen my problem-solving skills, sharpen my attention to detail, and
+                        understand the balance between design, functionality, and user experience.</p>
+                </div>
+            </div>
+            <hr class="hr3">
+            <div class="Image">
+                <h3>My Recent Work</h3>
+            </div>
+        </section>
+        </div>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web developer', 'Web Designer', 'WordPress Developer',],
+            loop: true,
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>

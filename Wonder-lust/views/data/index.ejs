@@ -1,0 +1,28 @@
+<% layout("/layouts/boilerplate") -%>
+
+  <body>
+    <h3>All Listings</h3>
+    <!-- <form method="GET" action="/data/new" >
+    <button>Add New Listing</button>
+   </form>-->
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+      <% for (let listing of allListing) { %>
+        <a href="/data/<%= listing._id %>" class="cards-link">
+          <div class="card col">
+            <img src="<%= listing.image.url %>"
+              class="card-img-top" alt="<%= listing.title %>" style="height: 18rem; object-fit: cover;" />
+              <div class="card-img-overlay"></div>
+            <div class="card-body">
+              <p class="card-text">
+                <b>
+                  <%= listing.title %>
+                </b>
+                <br>
+               &#8377; <%= (listing.price != null) ? listing.price.toLocaleString("en-IN") : "N/A" %>/Per Night
+              </p>
+            </div>
+          </div>
+        </a>
+      <% } %>
+    </div>
+  </body>

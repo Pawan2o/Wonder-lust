@@ -1,0 +1,26 @@
+{
+  "Workflow Comment JS": {
+    "prefix": "workflow-js",
+    "body": [
+      "// Workflow: $1",
+      "$0"
+    ],
+    "description": "Add workflow comment to JavaScript file"
+  },
+  "Workflow Comment EJS": {
+    "prefix": "workflow-ejs",
+    "body": [
+      "<!-- Workflow: $1 -->",
+      "$0"
+    ],
+    "description": "Add workflow comment to EJS file"
+  },
+  "Workflow Comment CSS": {
+    "prefix": "workflow-css",
+    "body": [
+      "/* Workflow: $1 */",
+      "$0"
+    ],
+    "description": "Add workflow comment to CSS file"
+  }
+}
